@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<!-- saved from url=(0121)#contact -->
+<html lang="uk" data-theme="dark" data-lang="uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Human Rights Standard — незалежна ініціатива для впровадження стандартів прав людини в бізнесі. / An independent initiative for implementing human rights standards in business.">
+<title>HRS Foundation — Human Rights Standard</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ── DESIGN TOKENS ── */
+:root,[data-theme="light"]{
+  --navy:#1A2850;--navy-light:#253570;--navy-deep:#111A38;
+  --gold:#C8A84B;--gold-light:#E8D08A;--gold-pale:#F5EDD4;
+  --ivory:#F5F3EE;--ivory-dark:#EDE9E0;--ivory-medium:#E8E5DC;
+  --gray:#7A7874;--gray-light:#B8B6B0;--gray-faint:#D8D6D0;
+  --text:#1A1816;--text-muted:#6B6966;--text-faint:#A8A6A0;
+  --surface:#FFFFFF;--surface-2:#FAF9F6;--divider:#E4E2DC;
+  --font-d:'Cormorant Garamond',Georgia,serif;
+  --font-b:'DM Sans','Helvetica Neue',sans-serif;
+  --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;--r-full:9999px;
+  --s1:.25rem;--s2:.5rem;--s3:.75rem;--s4:1rem;--s5:1.25rem;--s6:1.5rem;
+  --s8:2rem;--s10:2.5rem;--s12:3rem;--s16:4rem;--s20:5rem;--s24:6rem;
+  --shadow-sm:0 1px 3px rgba(26,40,80,.07);
+  --shadow-md:0 4px 16px rgba(26,40,80,.09);
+  --shadow-lg:0 12px 40px rgba(26,40,80,.13);
+  --t-base:clamp(1rem,.95rem + .25vw,1.125rem);
+  --t-sm:clamp(.875rem,.8rem + .35vw,1rem);
+  --t-xs:clamp(.75rem,.7rem + .25vw,.875rem);
+  --t-lg:clamp(1.125rem,1rem + .75vw,1.5rem);
+  --t-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
+  --t-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);
+  --t-hero:clamp(2.8rem,.5rem + 6vw,7rem);
+  --nav-h:68px;
+}
+[data-theme="dark"]{
+  --navy:#4f98a3;--navy-light:#5fa8b4;--navy-deep:#3a7880;
+  --ivory:#171614;--ivory-dark:#1c1b19;--ivory-medium:#22211f;
+  --gray:#797876;--gray-light:#5a5957;--gray-faint:#393836;
+  --text:#cdccca;--text-muted:#797876;--text-faint:#5a5957;
+  --surface:#1c1b19;--surface-2:#201f1d;--divider:#262523;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.2);
+  --shadow-md:0 4px 12px rgba(0,0,0,.3);
+  --shadow-lg:0 12px 32px rgba(0,0,0,.4);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
+body{font-family:var(--font-b);font-size:var(--t-base);color:var(--text);background:var(--ivory);line-height:1.65;min-height:100dvh}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,h4{font-family:var(--font-d);line-height:1.15;text-wrap:balance}
+p,li{text-wrap:pretty;max-width:72ch}
+::selection{background:rgba(200,168,75,.2);color:var(--text)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:var(--r-sm)}
+button{cursor:pointer;background:none;border:none;font:inherit;color:inherit}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
+
+/* ── LAYOUT ── */
+.container{max-width:1100px;margin-inline:auto;padding-inline:clamp(var(--s6),4vw,var(--s12))}
+.container--narrow{max-width:720px;margin-inline:auto;padding-inline:clamp(var(--s6),4vw,var(--s12))}
+.section{padding-block:clamp(var(--s12),8vw,var(--s24))}
+.section--tight{padding-block:clamp(var(--s8),5vw,var(--s16))}
+
+/* ── LANGUAGE TOGGLE ── */
+.lang-toggle{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.2);border-radius:var(--r-full);overflow:hidden;flex-shrink:0;margin-left:auto}
+.lang-btn{padding:.3rem .75rem;font-size:var(--t-xs);font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.5);transition:background .2s,color .2s;cursor:pointer;text-transform:uppercase}
+.lang-btn.active{background:var(--gold);color:var(--navy-deep)}
+.lang-btn:hover:not(.active){color:#fff;background:rgba(255,255,255,.08)}
+
+/* ── NAVIGATION ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);background:rgba(17,26,56,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(200,168,75,.12);transition:background .3s;overflow:hidden}
+.nav--scrolled{background:rgba(17,26,56,.98)}
+.nav-inner{max-width:1200px;margin:0 auto;padding-inline:clamp(var(--s6),4vw,var(--s12));height:100%;display:flex;align-items:center;gap:var(--s3)}
+.nav-logo{display:flex;align-items:center;gap:var(--s3);flex-shrink:0}
+.nav-logo-text{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:#fff;letter-spacing:.01em}
+.nav-logo-text span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:var(--s3)}
+.nav-link{font-size:var(--t-xs);font-weight:500;color:rgba(255,255,255,.65);letter-spacing:.04em;transition:color .2s;padding-block:var(--s2);white-space:nowrap}
+.nav-link:hover{color:rgba(255,255,255,.95)}
+.nav-cta{display:inline-flex;align-items:center;gap:var(--s2);background:var(--gold);color:var(--navy-deep);font-size:var(--t-sm);font-weight:600;padding:.4rem .9rem;border-radius:var(--r-full);letter-spacing:.02em;white-space:nowrap;transition:background .2s,transform .15s;flex-shrink:0}
+.nav-cta:hover{background:var(--gold-light);transform:translateY(-1px)}
+.theme-toggle{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:var(--r-full);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.6);transition:border-color .2s,color .2s;cursor:pointer;flex-shrink:0}
+.theme-toggle:hover{border-color:rgba(200,168,75,.5);color:var(--gold)}
+.menu-btn{display:none;flex-direction:column;gap:5px;width:38px;height:38px;align-items:center;justify-content:center;cursor:pointer;border:1px solid rgba(255,255,255,.15);border-radius:var(--r-md)}
+.menu-btn span{display:block;width:20px;height:1.5px;background:rgba(255,255,255,.7);transition:.3s}
+.mobile-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:rgba(17,26,56,.98);backdrop-filter:blur(20px);border-bottom:1px solid rgba(200,168,75,.12);padding:var(--s6) clamp(var(--s6),4vw,var(--s12));flex-direction:column;gap:var(--s4);z-index:99}
+.mobile-menu.open{display:flex}
+.mobile-nav-link{font-size:var(--t-base);font-weight:500;color:rgba(255,255,255,.75);padding:var(--s3) 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.mobile-nav-link:hover{color:var(--gold)}
+.mobile-lang-row{display:flex;gap:var(--s3);padding-top:var(--s3)}
+
+/* ── HERO ── */
+.hero{position:relative;min-height:100dvh;display:flex;align-items:center;overflow:hidden;background:var(--navy-deep)}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0d1428 0%,#1A2850 45%,#1e2f5e 75%,#111A38 100%)}
+.hero-pattern{position:absolute;inset:0;background-image:radial-gradient(circle at 20% 80%,rgba(200,168,75,.08) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(79,152,163,.06) 0%,transparent 50%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,168,75,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(200,168,75,.04) 1px,transparent 1px);background-size:60px 60px}
+.hero-inner{position:relative;z-index:1;padding-block:clamp(var(--s24),12vw,var(--s32));padding-top:calc(var(--nav-h) + clamp(var(--s12),8vw,var(--s20)))}
+.hero-content{max-width:1100px;margin-inline:auto;padding-inline:clamp(var(--s6),4vw,var(--s12));display:grid;grid-template-columns:1fr 1fr;gap:clamp(var(--s8),5vw,var(--s16));align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:var(--s3);font-size:var(--t-xs);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:var(--s6)}
+.hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
+.hero-h1{font-size:var(--t-hero);color:#fff;font-weight:700;line-height:1.05;margin-bottom:var(--s6)}
+.hero-h1 em{font-style:italic;color:var(--gold);font-weight:400}
+.hero-sub{font-size:var(--t-lg);color:rgba(255,255,255,.6);font-weight:300;line-height:1.6;margin-bottom:var(--s8);max-width:52ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:var(--s4)}
+.btn-primary{display:inline-flex;align-items:center;gap:var(--s3);background:var(--gold);color:var(--navy-deep);font-family:var(--font-b);font-size:var(--t-sm);font-weight:600;padding:.75rem 1.75rem;border-radius:var(--r-full);letter-spacing:.04em;transition:background .2s,transform .15s,box-shadow .2s}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,168,75,.3)}
+.btn-secondary{display:inline-flex;align-items:center;gap:var(--s3);background:transparent;color:#fff;font-size:var(--t-sm);font-weight:500;padding:.75rem 1.75rem;border-radius:var(--r-full);border:1px solid rgba(255,255,255,.25);letter-spacing:.04em;transition:border-color .2s,background .2s,transform .15s}
+.btn-secondary:hover{border-color:rgba(200,168,75,.6);background:rgba(200,168,75,.08);transform:translateY(-2px)}
+.hero-visual{display:flex;justify-content:center;align-items:center}
+.hero-seal{position:relative;width:clamp(260px,28vw,360px);height:clamp(260px,28vw,360px)}
+.hero-seal svg{width:100%;height:100%;filter:drop-shadow(0 20px 60px rgba(200,168,75,.2))}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s6);margin-top:var(--s12);padding-top:var(--s8);border-top:1px solid rgba(255,255,255,.1)}
+.stat-num{font-family:var(--font-d);font-size:var(--t-2xl);font-weight:700;color:var(--gold);line-height:1}
+.stat-label{font-size:var(--t-xs);color:rgba(255,255,255,.45);letter-spacing:.08em;text-transform:uppercase;margin-top:var(--s2)}
+.scroll-hint{position:absolute;bottom:var(--s8);left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:var(--s2);color:rgba(255,255,255,.3);font-size:var(--t-xs);letter-spacing:.1em}
+.scroll-hint-line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(200,168,75,.5),transparent);animation:scrollLine 2s ease-in-out infinite}
+@keyframes scrollLine{0%{opacity:0;transform:scaleY(0);transform-origin:top}50%{opacity:1}100%{opacity:0;transform:scaleY(1);transform-origin:top}}
+
+/* ── SECTION LABELS ── */
+.section-eyebrow{display:inline-flex;align-items:center;gap:var(--s3);font-size:var(--t-xs);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:var(--s5)}
+.section-eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--gold)}
+.section-title{font-size:var(--t-2xl);color:var(--navy);font-weight:700;margin-bottom:var(--s5);line-height:1.1}
+[data-theme="dark"] .section-title{color:#fff}
+.section-sub{font-size:var(--t-base);color:var(--text-muted);line-height:1.75;margin-bottom:var(--s10);max-width:62ch}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(var(--s10),6vw,var(--s20));align-items:start;margin-top:var(--s10)}
+.about-body{font-size:var(--t-base);color:var(--text-muted);line-height:1.85}
+.about-body p+p{margin-top:var(--s5)}
+.about-aside{background:var(--surface);border:1px solid var(--divider);border-radius:var(--r-xl);padding:var(--s8);box-shadow:var(--shadow-sm)}
+[data-theme="dark"] .about-aside{background:var(--surface-2)}
+.aside-title{font-family:var(--font-d);font-size:var(--t-lg);color:var(--navy);font-weight:600;margin-bottom:var(--s6)}
+[data-theme="dark"] .aside-title{color:#fff}
+.ref-items{display:flex;flex-direction:column;gap:var(--s4)}
+.ref-item{display:flex;align-items:flex-start;gap:var(--s4);padding:var(--s4);border-radius:var(--r-lg);border:1px solid var(--divider);transition:border-color .2s,box-shadow .2s}
+.ref-item:hover{border-color:rgba(200,168,75,.25);box-shadow:var(--shadow-sm)}
+.ref-icon{width:36px;height:36px;border-radius:var(--r-md);background:rgba(26,40,80,.06);display:flex;align-items:center;justify-content:center;color:var(--navy);flex-shrink:0}
+[data-theme="dark"] .ref-icon{background:rgba(200,168,75,.1);color:var(--gold)}
+.ref-name{font-size:var(--t-sm);font-weight:600;color:var(--navy);margin-bottom:2px}
+[data-theme="dark"] .ref-name{color:rgba(255,255,255,.9)}
+.ref-desc{font-size:var(--t-xs);color:var(--text-muted)}
+
+/* ── HOW IT WORKS ── */
+.how-bg{background:var(--navy)}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s5);margin-top:var(--s10)}
+.step-card{padding:var(--s7,1.75rem) var(--s6);border-radius:var(--r-xl);border:1px solid rgba(200,168,75,.1);background:rgba(255,255,255,.03);transition:border-color .3s,background .3s}
+.step-card:hover{border-color:rgba(200,168,75,.25);background:rgba(200,168,75,.04)}
+.step-num{font-family:var(--font-d);font-size:3rem;font-weight:700;color:rgba(200,168,75,.18);line-height:1;margin-bottom:var(--s5)}
+.step-title{font-family:var(--font-d);font-size:var(--t-lg);color:#fff;font-weight:600;margin-bottom:var(--s3)}
+.step-body{font-size:var(--t-sm);color:rgba(255,255,255,.45);line-height:1.7}
+
+/* ── CERTIFICATION ── */
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s6);margin-top:var(--s10)}
+.cert-card{border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--divider);background:var(--surface);display:flex;flex-direction:column;transition:box-shadow .3s,transform .3s}
+.cert-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+[data-theme="dark"] .cert-card{background:var(--surface-2)}
+.cert-card--committed{background:var(--navy);border-color:rgba(200,168,75,.2)}
+.cert-card--committed .cert-level,.cert-card--committed .cert-name,.cert-card--committed .cert-feature{color:#fff}
+.cert-card--committed .cert-feature::before{background:rgba(200,168,75,.5)}
+.cert-card--certified{background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 100%);border-color:var(--gold)}
+.cert-card--certified .cert-level,.cert-card--certified .cert-name,.cert-card--certified .cert-feature{color:#fff}
+.cert-card--certified .cert-feature::before{background:var(--gold)}
+.cert-card-head{padding:var(--s8) var(--s6) var(--s6);display:flex;justify-content:space-between;align-items:flex-start}
+.cert-level{font-size:var(--t-xs);letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold);margin-bottom:var(--s2);white-space:nowrap}
+.cert-sublevel{font-size:var(--t-xs);letter-spacing:.08em;color:var(--gold);opacity:.65;margin-bottom:var(--s3);font-weight:500;white-space:nowrap}
+.cert-name{font-family:var(--font-d);font-size:var(--t-xl);font-weight:700;color:var(--navy);line-height:1.05}
+[data-theme="dark"] .cert-name{color:#fff}
+.cert-card--aware .cert-name{color:var(--navy)}
+.cert-name--aware{color:var(--navy)}
+[data-theme="dark"] .cert-name--aware{color:#fff}
+.cert-badge{width:52px;height:52px;flex-shrink:0}
+.cert-divider{height:1px;background:var(--divider);margin-inline:var(--s6)}
+.cert-card--committed .cert-divider,.cert-card--certified .cert-divider{background:rgba(255,255,255,.1)}
+.cert-body{padding:var(--s6);flex:1;display:flex;flex-direction:column}
+.cert-features{display:flex;flex-direction:column;gap:var(--s3);flex:1;margin-bottom:var(--s6)}
+.cert-feature{display:flex;align-items:flex-start;gap:var(--s3);font-size:var(--t-sm);color:var(--text-muted);line-height:1.5}
+[data-theme="dark"] .cert-card--aware .cert-feature{color:var(--text-muted)}
+.cert-feature::before{content:'';display:block;width:5px;height:5px;border-radius:50%;background:rgba(26,40,80,.25);flex-shrink:0;margin-top:.45em}
+.cert-cta{display:inline-flex;justify-content:center;align-items:center;padding:.65rem var(--s6);border-radius:var(--r-full);font-size:var(--t-sm);font-weight:600;letter-spacing:.04em;border:1px solid var(--divider);color:var(--navy);transition:background .2s,border-color .2s,color .2s,transform .15s}
+.cert-cta:hover{background:var(--navy);color:#fff;border-color:var(--navy);transform:translateY(-1px)}
+.cert-card--committed .cert-cta,.cert-card--certified .cert-cta{border-color:rgba(200,168,75,.4);color:var(--gold);background:rgba(200,168,75,.07)}
+.cert-card--committed .cert-cta:hover,.cert-card--certified .cert-cta:hover{background:var(--gold);color:var(--navy-deep);border-color:var(--gold)}
+
+/* ── ACTIVITIES ── */
+.activities-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s6);margin-top:var(--s10)}
+.activity-card{padding:var(--s8);border-radius:var(--r-xl);border:1px solid var(--divider);background:var(--surface-2);transition:box-shadow .3s,border-color .3s}
+.activity-card:hover{box-shadow:var(--shadow-md);border-color:rgba(200,168,75,.2)}
+.activity-icon{width:52px;height:52px;border-radius:var(--r-lg);background:rgba(26,40,80,.07);display:flex;align-items:center;justify-content:center;margin-bottom:var(--s5);color:var(--navy)}
+[data-theme="dark"] .activity-icon{background:rgba(255,255,255,.06);color:var(--gold)}
+.activity-title{font-family:var(--font-d);font-size:var(--t-lg);color:var(--navy);font-weight:600;margin-bottom:var(--s3)}
+[data-theme="dark"] .activity-title{color:#fff}
+.activity-body{font-size:var(--t-sm);color:var(--text-muted);line-height:1.7}
+
+/* ── AUDIENCE ── */
+.audience-bg{background:var(--ivory-dark)}
+[data-theme="dark"] .audience-bg{background:var(--surface-2)}
+.audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s5);margin-top:var(--s10)}
+.audience-card{text-align:center;padding:var(--s6) var(--s4);border-radius:var(--r-xl);border:1px solid var(--divider);background:var(--surface);transition:box-shadow .3s,transform .3s,border-color .3s}
+.audience-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);border-color:rgba(200,168,75,.25)}
+.audience-icon{width:52px;height:52px;border-radius:50%;margin-inline:auto;margin-bottom:var(--s4);display:flex;align-items:center;justify-content:center;background:rgba(26,40,80,.06);color:var(--navy)}
+[data-theme="dark"] .audience-icon{background:rgba(200,168,75,.1);color:var(--gold)}
+.audience-title{font-family:var(--font-d);font-size:var(--t-base);font-weight:600;color:var(--navy);margin-bottom:var(--s2)}
+[data-theme="dark"] .audience-title{color:#fff}
+.audience-body{font-size:var(--t-xs);color:var(--text-muted);line-height:1.55}
+
+/* ── INTERNATIONAL ── */
+.intl-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(var(--s8),5vw,var(--s16));align-items:center}
+.partner-row{display:flex;flex-wrap:wrap;gap:var(--s3)}
+.partner-badge{display:flex;align-items:center;gap:var(--s3);padding:var(--s3) var(--s5);border-radius:var(--r-full);border:1px solid var(--divider);background:var(--surface);font-size:var(--t-xs);font-weight:500;color:var(--text-muted);letter-spacing:.04em;transition:border-color .2s,box-shadow .2s}
+.partner-badge:hover{border-color:rgba(200,168,75,.3);box-shadow:var(--shadow-sm)}
+.partner-badge svg{color:var(--navy);flex-shrink:0}
+[data-theme="dark"] .partner-badge{background:var(--surface-2);border-color:var(--divider)}
+[data-theme="dark"] .partner-badge svg{color:var(--gold)}
+.quote-block{padding:var(--s6) var(--s8);border-left:3px solid var(--gold);background:var(--surface-2);border-radius:0 var(--r-lg) var(--r-lg) 0;margin-top:var(--s6)}
+.quote-text{font-family:var(--font-d);font-size:var(--t-lg);font-style:italic;color:var(--text-muted);line-height:1.55}
+[data-theme="dark"] .quote-text{color:rgba(255,255,255,.6)}
+.quote-source{margin-top:var(--s3);font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600}
+
+/* ── REGIONS ── */
+.regions-bg{background:var(--navy)}
+.regions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s5);margin-top:var(--s10)}
+.region-card{padding:var(--s6);border-radius:var(--r-xl);border:1px solid rgba(200,168,75,.1);background:rgba(255,255,255,.03);transition:border-color .3s,background .3s}
+.region-card:hover{border-color:rgba(200,168,75,.3);background:rgba(200,168,75,.05)}
+.region-tag{display:inline-flex;align-items:center;gap:var(--s2);font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:var(--s4)}
+.region-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.region-name{font-family:var(--font-d);font-size:var(--t-xl);color:#fff;font-weight:600;margin-bottom:var(--s3)}
+.region-body{font-size:var(--t-sm);color:rgba(255,255,255,.5);line-height:1.65}
+.region-card--pilot .region-tag::before{background:#4CAF50}
+.region-card--pilot .region-tag{color:#4CAF50}
+
+/* ── CTA STRIP ── */
+.cta-strip{background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 60%,var(--navy-light) 100%);padding-block:clamp(var(--s12),8vw,var(--s20));text-align:center;position:relative;overflow:hidden}
+.cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 50% 100%,rgba(200,168,75,.1) 0%,transparent 70%)}
+.cta-strip-inner{position:relative;z-index:1}
+.cta-strip h2{font-family:var(--font-d);font-size:var(--t-2xl);color:#fff;font-weight:700;font-style:italic;margin-bottom:var(--s4)}
+.cta-strip h2 strong{font-style:normal;color:var(--gold)}
+.cta-strip p{font-size:var(--t-base);color:rgba(255,255,255,.55);margin-bottom:var(--s8);max-width:50ch;margin-inline:auto}
+.cta-strip .hero-actions{justify-content:center}
+
+/* ── FAQ ── */
+.faq-list{margin-top:var(--s10);display:flex;flex-direction:column;gap:var(--s2)}
+.faq-item{border:1px solid var(--divider);border-radius:var(--r-lg);overflow:hidden;transition:box-shadow .2s}
+.faq-item.open{box-shadow:var(--shadow-sm)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:var(--s5) var(--s6);cursor:pointer;background:var(--surface);font-family:var(--font-d);font-size:var(--t-base);font-weight:600;color:var(--navy);gap:var(--s4);transition:background .2s}
+[data-theme="dark"] .faq-q{background:var(--surface-2);color:#fff}
+.faq-q:hover{background:var(--ivory-dark)}
+[data-theme="dark"] .faq-q:hover{background:rgba(255,255,255,.04)}
+.faq-icon{width:24px;height:24px;border-radius:50%;border:1px solid rgba(26,40,80,.15);display:flex;align-items:center;justify-content:center;color:var(--navy);flex-shrink:0;transition:transform .3s,background .2s,border-color .2s}
+[data-theme="dark"] .faq-icon{border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.7)}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--gold);border-color:var(--gold);color:var(--navy-deep)}
+.faq-a{display:none;padding:0 var(--s6) var(--s6);font-size:var(--t-sm);color:var(--text-muted);line-height:1.75;background:var(--surface)}
+[data-theme="dark"] .faq-a{background:var(--surface-2)}
+.faq-item.open .faq-a{display:block}
+
+/* ── CONTACT ── */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(var(--s10),6vw,var(--s16));align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:var(--s6)}
+.contact-item{display:flex;align-items:flex-start;gap:var(--s4)}
+.contact-icon{width:44px;height:44px;border-radius:var(--r-lg);background:rgba(26,40,80,.06);display:flex;align-items:center;justify-content:center;color:var(--navy);flex-shrink:0}
+[data-theme="dark"] .contact-icon{background:rgba(200,168,75,.1);color:var(--gold)}
+.contact-label{font-size:var(--t-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--text-faint);font-weight:500;margin-bottom:var(--s1)}
+.contact-val{font-size:var(--t-base);color:var(--text)}
+[data-theme="dark"] .contact-val{color:rgba(255,255,255,.8)}
+.contact-form-wrap{background:var(--surface);border:1px solid var(--divider);border-radius:var(--r-xl);padding:var(--s8);box-shadow:var(--shadow-sm)}
+[data-theme="dark"] .contact-form-wrap{background:var(--surface-2)}
+.form-group{display:flex;flex-direction:column;gap:var(--s2);margin-bottom:var(--s5)}
+.form-group label{font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--text-muted)}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:.65rem var(--s4);border:1px solid var(--divider);border-radius:var(--r-md);font:inherit;font-size:var(--t-sm);color:var(--text);background:var(--ivory);transition:border-color .2s,box-shadow .2s;resize:none}
+[data-theme="dark"] .form-group input,[data-theme="dark"] .form-group textarea,[data-theme="dark"] .form-group select{background:var(--ivory-dark);border-color:var(--divider);color:var(--text)}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,168,75,.12)}
+.form-group textarea{min-height:120px}
+.form-submit{width:100%}
+
+/* ── FOOTER ── */
+.footer{background:var(--navy-deep);padding-block:clamp(var(--s10),6vw,var(--s16))}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:clamp(var(--s8),4vw,var(--s12));margin-bottom:var(--s10)}
+.footer-logo{font-family:var(--font-d);font-size:1.35rem;font-weight:700;color:#fff;margin-bottom:var(--s4)}
+.footer-logo span{color:var(--gold)}
+.footer-desc{font-size:var(--t-sm);color:rgba(255,255,255,.4);line-height:1.65;max-width:36ch}
+.footer-col h4{font-family:var(--font-d);font-size:var(--t-base);color:#fff;font-weight:600;margin-bottom:var(--s5)}
+.footer-links{display:flex;flex-direction:column;gap:var(--s3)}
+.footer-link{font-size:var(--t-sm);color:rgba(255,255,255,.4);transition:color .2s}
+.footer-link:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:var(--s6);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--s4)}
+.footer-copy{font-size:var(--t-xs);color:rgba(255,255,255,.3)}
+.footer-legal{display:flex;gap:var(--s5)}
+.footer-legal a{font-size:var(--t-xs);color:rgba(255,255,255,.3);transition:color .2s}
+.footer-legal a:hover{color:var(--gold)}
+.social-links{display:flex;gap:var(--s3)}
+.social-link{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);transition:border-color .2s,color .2s,background .2s}
+.social-link:hover{border-color:var(--gold);color:var(--gold);background:rgba(200,168,75,.08)}
+
+/* ── REVEAL ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .steps-grid,.cert-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid,.intl-grid,.contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .audience-grid{grid-template-columns:repeat(3,1fr)}
+  .nav-cta{display:none}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-cta{display:none}
+  .menu-btn{display:flex}
+  .hero-content{grid-template-columns:1fr}
+  .hero-visual{display:none}
+  .hero-stats{grid-template-columns:repeat(3,1fr)}
+  .steps-grid,.cert-grid,.activities-grid,.regions-grid{grid-template-columns:1fr}
+  .audience-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .audience-grid{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr;gap:var(--s4)}
+  .lang-toggle{display:none}
+}
+
+/* ── LANG VISIBILITY ── */
+[data-lang="uk"] .en-only{display:none !important}
+[data-lang="en"] .uk-only{display:none !important}
+</style>
+</head>
+
+<body id="top">
+
+<!-- ══ NAVIGATION ══ -->
+<nav class="nav nav--scrolled" id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#top">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+        <rect width="34" height="34" rx="7" fill="rgba(200,168,75,.12)"></rect>
+        <rect x="6" y="8" width="22" height="4" rx="2" fill="#C8A84B"></rect>
+        <rect x="6" y="15" width="16" height="4" rx="2" fill="rgba(255,255,255,0.9)"></rect>
+        <rect x="6" y="22" width="10" height="4" rx="2" fill="rgba(200,168,75,0.5)"></rect>
+      </svg>
+      <span class="nav-logo-text">HRS <span>Foundation</span></span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link uk-only" href="#about">Про нас</a>
+      <a class="nav-link en-only" href="#about">About</a>
+      <a class="nav-link uk-only" href="#how">Як це працює</a>
+      <a class="nav-link en-only" href="#how">Process</a>
+      <a class="nav-link uk-only" href="#certification">Сертифікація</a>
+      <a class="nav-link en-only" href="#certification">Certification</a>
+      <a class="nav-link uk-only" href="#activities">Напрями</a>
+      <a class="nav-link en-only" href="#activities">Activities</a>
+      <a class="nav-link uk-only" href="#international">Міжнародний</a>
+      <a class="nav-link en-only" href="#international">International</a>
+      <a class="nav-link uk-only" href="#contact">Контакт</a>
+      <a class="nav-link en-only" href="#contact">Contact</a>
+    </div>
+    <div class="lang-toggle" id="langToggle">
+      <button class="lang-btn active" id="btnUK" aria-label="Switch to Ukrainian">UA</button>
+      <button class="lang-btn" id="btnEN" aria-label="Switch to English">EN</button>
+    </div>
+    <button class="theme-toggle" data-theme-toggle="" aria-label="Toggle theme"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg></button>
+    <a class="nav-cta uk-only" href="#contact">Подати заявку</a>
+    <a class="nav-cta en-only" href="#contact">Apply Now</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a class="mobile-nav-link uk-only" href="#about" onclick="closeMobileMenu()">Про нас</a>
+  <a class="mobile-nav-link en-only" href="#about" onclick="closeMobileMenu()">About</a>
+  <a class="mobile-nav-link uk-only" href="#how" onclick="closeMobileMenu()">Як це працює</a>
+  <a class="mobile-nav-link en-only" href="#how" onclick="closeMobileMenu()">How It Works</a>
+  <a class="mobile-nav-link uk-only" href="#certification" onclick="closeMobileMenu()">Сертифікація</a>
+  <a class="mobile-nav-link en-only" href="#certification" onclick="closeMobileMenu()">Certification</a>
+  <a class="mobile-nav-link uk-only" href="#audience" onclick="closeMobileMenu()">Для кого</a>
+  <a class="mobile-nav-link en-only" href="#audience" onclick="closeMobileMenu()">For Whom</a>
+  <a class="mobile-nav-link uk-only" href="#contact" onclick="closeMobileMenu()">Контакт</a>
+  <a class="mobile-nav-link en-only" href="#contact" onclick="closeMobileMenu()">Contact</a>
+  <div class="mobile-lang-row">
+    <button class="lang-btn active" id="mobileBtnUK">UA</button>
+    <button class="lang-btn" id="mobileBtnEN">EN</button>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner" style="width:100%">
+    <div class="hero-content">
+      <div>
+        <div class="hero-eyebrow uk-only">Незалежна ініціатива</div>
+        <div class="hero-eyebrow en-only">Independent Initiative</div>
+        <h1 class="hero-h1 uk-only">Human Rights<br><em>Standard.</em></h1>
+        <h1 class="hero-h1 en-only">Human Rights<br><em>Standard.</em></h1>
+        <p class="hero-sub uk-only">Ініціатива з інтеграції прав людини у бізнес-практику через розробку стандарту, моделі оцінювання та механізму визнання відповідального бізнесу.</p>
+        <p class="hero-sub en-only">An initiative to integrate human rights into business practice through the development of a standard, an assessment model and a recognition mechanism for responsible companies.</p>
+        <div class="hero-actions">
+          <a class="btn-primary uk-only" href="#certification">Переглянути рівні сертифікації</a>
+          <a class="btn-primary en-only" href="#certification">View Certification Levels</a>
+          <a class="btn-secondary uk-only" href="#about">Дізнатися більше</a>
+          <a class="btn-secondary en-only" href="#about">Learn More</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num">3</div>
+            <div class="stat-label uk-only">Етапи розвитку</div>
+            <div class="stat-label en-only">Development stages</div>
+          </div>
+          <div>
+            <div class="stat-num">UN</div>
+            <div class="stat-label uk-only">Керівні принципи ООН</div>
+            <div class="stat-label en-only">UN Guiding Principles</div>
+          </div>
+          <div>
+            <div class="stat-num">EU</div>
+            <div class="stat-label uk-only">Європейський контекст</div>
+            <div class="stat-label en-only">European context</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-seal">
+          <svg viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="HRS Certified Seal">
+            <circle cx="180" cy="180" r="168" stroke="#C8A84B" stroke-width="1.5" stroke-dasharray="6 4"></circle>
+            <circle cx="180" cy="180" r="155" stroke="rgba(200,168,75,0.3)" stroke-width="1"></circle>
+            <circle cx="180" cy="180" r="140" fill="rgba(26,40,80,0.6)" stroke="rgba(200,168,75,0.15)" stroke-width="1"></circle>
+            <rect x="90" y="130" width="80" height="18" rx="9" fill="#C8A84B"></rect>
+            <rect x="90" y="158" width="58" height="18" rx="9" fill="rgba(255,255,255,0.7)"></rect>
+            <rect x="90" y="186" width="36" height="18" rx="9" fill="rgba(200,168,75,0.4)"></rect>
+            <text x="180" y="242" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#C8A84B" text-anchor="middle" letter-spacing="6">CERTIFIED</text>
+            <text x="180" y="104" font-family="Georgia,serif" font-size="11" fill="rgba(200,168,75,0.6)" text-anchor="middle" letter-spacing="3">HUMAN RIGHTS</text>
+            <text x="180" y="122" font-family="Georgia,serif" font-size="11" fill="rgba(200,168,75,0.6)" text-anchor="middle" letter-spacing="3">STANDARD</text>
+            <circle cx="180" cy="180" r="6" fill="rgba(200,168,75,0.2)" stroke="#C8A84B" stroke-width="1.5"></circle>
+            <path d="M177 180 L183 180 M180 177 L180 183" stroke="#C8A84B" stroke-width="1.5"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-hint-line"></div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="reveal visible">
+      <div class="section-eyebrow uk-only">Про ініціативу</div>
+      <div class="section-eyebrow en-only">About the Initiative</div>
+      <h2 class="section-title uk-only">Що таке Human Rights Standard</h2>
+      <h2 class="section-title en-only">What is Human Rights Standard</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-body reveal visible">
+        <!-- UA -->
+        <div class="uk-only">
+          <p>Human Rights Standard (HRS) - незалежна ініціатива, спрямована на розробку практичного та надійного інструменту для приведення діяльності бізнесу у відповідність до міжнародних стандартів прав людини.</p>
+          <p>Ініціатива перебуває на етапі розвитку та зосереджена на вибудові партнерств та на розробці базової структури стандарту і моделі оцінювання.</p>
+          <p>На наступних етапах ініціатива передбачає пілотування підходу та запуск механізму публічного підтвердження відповідності через знак Human Rights Standard.</p>
+        </div>
+        <!-- EN -->
+        <div class="en-only">
+          <p>Human Rights Standard (HRS) is an independent initiative aimed at developing a practical and credible framework for aligning business operations with international human rights standards.</p>
+          <p>The initiative is at the development stage, building partnerships with international organisations, business associations and public authorities, while designing the initial structure of the standard and the assessment model.</p>
+          <p>At the next stages, the initiative envisages pilot implementation and the introduction of a public recognition mechanism through the Human Rights Standard mark.</p>
+        </div>
+      </div>
+      <div class="about-aside reveal visible">
+        <div class="aside-title uk-only">Нормативна база</div>
+        <div class="aside-title en-only">Normative Framework</div>
+        <div class="ref-items">
+          <div class="ref-item">
+            <div class="ref-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+            <div>
+              <div class="ref-name uk-only">Керівні принципи ООН (2011)</div>
+              <div class="ref-name en-only">UN Guiding Principles (2011)</div>
+              <div class="ref-desc uk-only">Базовий міжнародний стандарт «Захищай, поважай, усувай»</div>
+              <div class="ref-desc en-only">Core international standard "Protect, Respect, Remedy"</div>
+            </div>
+          </div>
+          <div class="ref-item">
+            <div class="ref-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></div>
+            <div>
+              <div class="ref-name">CMRec(2016)3 — Рада Європи</div>
+              <div class="ref-desc uk-only">Рекомендація щодо прав людини у бізнес-діяльності</div>
+              <div class="ref-desc en-only">Recommendation on human rights in business activity</div>
+            </div>
+          </div>
+          <div class="ref-item">
+            <div class="ref-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></div>
+            <div>
+              <div class="ref-name">ISO 26000</div>
+              <div class="ref-desc uk-only">Керівництво з соціальної відповідальності</div>
+              <div class="ref-desc en-only">Guidance on social responsibility</div>
+            </div>
+          </div>
+          <div class="ref-item">
+            <div class="ref-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></div>
+            <div>
+              <div class="ref-name">EU CSDDD (2024)</div>
+              <div class="ref-desc uk-only">Директива ЄС про корпоративну сталість</div>
+              <div class="ref-desc en-only">EU Corporate Sustainability Due Diligence Directive</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ══ -->
+<section class="section how-bg" id="how">
+  <div class="container">
+    <div class="reveal visible" style="text-align:center">
+      <div class="section-eyebrow uk-only" style="justify-content:center;display:inline-flex">Процес</div>
+      <div class="section-eyebrow en-only" style="justify-content:center;display:inline-flex">Process</div>
+      <h2 class="section-title uk-only" style="color:#fff">Як розвивається ініціатива</h2>
+      <h2 class="section-title en-only" style="color:#fff">How the Initiative Develops</h2>
+      <p class="section-sub uk-only" style="color:rgba(255,255,255,.45);text-align:center;margin-inline:auto">Поступовий шлях від базової концепції та партнерств до пілотування і запуску механізму визнання</p>
+      <p class="section-sub en-only" style="color:rgba(255,255,255,.45);text-align:center;margin-inline:auto">A gradual path from concept and partnerships to pilot implementation and the launch of a recognition mechanism</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal visible">
+        <div class="step-num">01</div>
+        <div class="step-title uk-only">Партнерства</div>
+        <div class="step-title en-only">Partnerships</div>
+        <div class="step-body uk-only">Вибудова співпраці з міжнародними організаціями, бізнес-об’єднаннями, торгово-промисловими палатами та органами влади</div>
+        <div class="step-body en-only">Building cooperation with international organizations, business associations, chambers of commerce and public authorities</div>
+      </div>
+      <div class="step-card reveal visible">
+        <div class="step-num">02</div>
+        <div class="step-title uk-only">Стандарт</div>
+        <div class="step-title en-only">Standard</div>
+        <div class="step-body uk-only">Розробка базової структури Human Rights Standard на основі стандартів Ради Європи та Керівних принципів ООН</div>
+        <div class="step-body en-only">Developing the initial structure of Human Rights Standard on the basis of the Council of Europe Standsrds and UN Guiding Principles</div>
+      </div>
+      <div class="step-card reveal visible">
+        <div class="step-num">03</div>
+        <div class="step-title uk-only">Пілотування</div>
+        <div class="step-title en-only">Pilot Phase</div>
+        <div class="step-body uk-only">Тестування підходу з обмеженим колом компаній для перевірки практичності критеріїв, методології та логіки оцінювання.</div>
+        <div class="step-body en-only">Testing the approach with a limited number of companies to validate the practicality of the criteria, methodology and assessment logic.</div>
+      </div>
+      <div class="step-card reveal visible">
+        <div class="step-num">04</div>
+        <div class="step-title uk-only">Визнання</div>
+        <div class="step-title en-only">Recognition</div>
+        <div class="step-body uk-only">Після пілотування та доопрацювання методології запроваджуватися механізм публічного підтвердження відповідності через знак Human Rights Standard</div>
+        <div class="step-body en-only">Following the pilot phase and refinement of the methodology, a public recognition mechanism through the Human Rights Standard will be introduced</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CERTIFICATION ══ -->
+<section class="section" id="certification">
+  <div class="container">
+    <div class="reveal visible">
+      <div class="section-eyebrow uk-only">Етапи залучення</div>
+      <div class="section-eyebrow en-only">Engagement Levels</div>
+      <h2 class="section-title uk-only">Три рівні взаємодії</h2>
+      <h2 class="section-title en-only">Three Levels of Engagement</h2>
+      <p class="section-sub uk-only">Ініціатива передбачає поступове залучення компаній — від ознайомлення зі стандартом до участі у пілотуванні та подальшому механізмі визнання.</p>
+      <p class="section-sub en-only">The initiative envisages gradual engagement of companies — from initial familiarization with the standard to pilot participation and, at a later stage, recognition through the mark.</p>
+    </div>
+    <div class="cert-grid">
+      <!-- AWARE -->
+      <div class="cert-card cert-card--aware reveal visible">
+        <div class="cert-card-head">
+          <div>
+            <div class="cert-level uk-only" style="color:#7A7874">Етап 1</div>
+            <div class="cert-level en-only" style="color:#7A7874">Stage 1</div>
+            <div class="cert-sublevel uk-only" style="color:#B8B6B0">Ознайомлення</div>
+            <div class="cert-sublevel en-only" style="color:#B8B6B0">Awareness</div>
+            <div class="cert-name cert-name--aware">HRS<br>Aware</div>
+          </div>
+          <div class="cert-badge">
+            <svg viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="24" stroke="#7A7874" stroke-width="1.5"></circle><rect x="12" y="18" width="14" height="3.5" rx="1.75" fill="#7A7874"></rect><rect x="12" y="24" width="10" height="3.5" rx="1.75" fill="rgba(122,120,116,0.6)"></rect><rect x="12" y="30" width="6" height="3.5" rx="1.75" fill="rgba(122,120,116,0.35)"></rect><text x="36" y="36" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#7A7874" text-anchor="middle">A</text></svg>
+          </div>
+        </div>
+        <div class="cert-divider"></div>
+        <div class="cert-body">
+          <div class="cert-features">
+            <div class="cert-feature uk-only">Ознайомлення з ініціативою</div>
+            <div class="cert-feature en-only">Introduction to the initiative</div>
+            <div class="cert-feature uk-only">Знайомство з міжнародними рамками</div>
+            <div class="cert-feature en-only">Familiarity with international frameworks</div>
+            <div class="cert-feature uk-only">Діалог із командою</div>
+            <div class="cert-feature en-only">Dialogue with the team</div>
+            <div class="cert-feature uk-only">Доступ до базових матеріалів</div>
+            <div class="cert-feature en-only">Access to introductory materials</div>
+            <div class="cert-feature uk-only">Можливість подальшої участі</div>
+            <div class="cert-feature en-only">Opportunity for further participation</div>
+          </div>
+          <a href="#contact" class="cert-cta uk-only">Долучитися</a>
+          <a href="#contact" class="cert-cta en-only">Join</a>
+        </div>
+      </div>
+      <!-- COMMITTED -->
+      <div class="cert-card cert-card--committed reveal visible">
+        <div class="cert-card-head">
+          <div>
+            <div class="cert-level uk-only">Етап 2</div>
+            <div class="cert-level en-only">Stage 2</div>
+            <div class="cert-sublevel uk-only">Залучення</div>
+            <div class="cert-sublevel en-only">Commitment</div>
+            <div class="cert-name">HRS<br>Committed</div>
+          </div>
+          <div class="cert-badge">
+            <svg viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="24" stroke="rgba(200,168,75,0.5)" stroke-width="1.5"></circle><rect x="12" y="18" width="14" height="3.5" rx="1.75" fill="rgba(200,168,75,0.8)"></rect><rect x="12" y="24" width="10" height="3.5" rx="1.75" fill="rgba(255,255,255,0.6)"></rect><rect x="12" y="30" width="6" height="3.5" rx="1.75" fill="rgba(200,168,75,0.35)"></rect><text x="36" y="36" font-family="Georgia,serif" font-size="9" font-weight="700" fill="rgba(200,168,75,0.8)" text-anchor="middle">C</text></svg>
+          </div>
+        </div>
+        <div class="cert-divider"></div>
+        <div class="cert-body">
+          <div class="cert-features">
+            <div class="cert-feature uk-only">Участь у консультаціях</div>
+            <div class="cert-feature en-only">Participation in consultations</div>
+            <div class="cert-feature uk-only">Надання зворотного зв’язку</div>
+            <div class="cert-feature en-only">Feedback on the draft approach</div>
+            <div class="cert-feature uk-only">Підготовка до пілоту</div>
+            <div class="cert-feature en-only">Preparation for the pilot phase</div>
+            <div class="cert-feature uk-only">Обговорення критеріїв</div>
+            <div class="cert-feature en-only">Discussion of criteria</div>
+            <div class="cert-feature uk-only">Формування партнерства</div>
+            <div class="cert-feature en-only">Building partnership relations</div>
+          </div>
+          <a href="#contact" class="cert-cta uk-only">Взяти участь</a>
+          <a href="#contact" class="cert-cta en-only">Participate</a>
+        </div>
+      </div>
+      <!-- CERTIFIED -->
+      <div class="cert-card cert-card--certified reveal visible">
+        <div class="cert-card-head">
+          <div>
+            <div class="cert-level uk-only">Етап 3</div>
+            <div class="cert-level en-only">Stage 3</div>
+            <div class="cert-sublevel uk-only">Пілот / визнання</div>
+            <div class="cert-sublevel en-only">Pilot / recognition</div>
+            <div class="cert-name">HRS<br>Certified</div>
+          </div>
+          <div class="cert-badge">
+            <svg viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="24" stroke="#C8A84B" stroke-width="2"></circle><rect x="12" y="18" width="14" height="3.5" rx="1.75" fill="#C8A84B"></rect><rect x="12" y="24" width="10" height="3.5" rx="1.75" fill="rgba(255,255,255,0.9)"></rect><rect x="12" y="30" width="6" height="3.5" rx="1.75" fill="rgba(200,168,75,0.5)"></rect><text x="36" y="36" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#C8A84B" text-anchor="middle">✓</text></svg>
+          </div>
+        </div>
+        <div class="cert-divider"></div>
+        <div class="cert-body">
+          <div class="cert-features">
+            <div class="cert-feature uk-only">Участь в оцінюванні</div>
+            <div class="cert-feature en-only">Assesment</div>
+            
+            
+            <div class="cert-feature uk-only">Аналіз результатів</div>
+            <div class="cert-feature en-only">Analysis of the findings</div>
+            <div class="cert-feature uk-only">Визначення рекомендацій</div>
+            <div class="cert-feature en-only">Recommendations</div>
+            
+            
+            <div class="cert-feature uk-only">Отримання ЗНАКУ HUMAN RIGHTS STANDARD</div>
+            <div class="cert-feature en-only">Awarding THE HUMAN RIGHTS STANDARD</div>
+          </div>
+          <a href="#contact" class="cert-cta uk-only">Обговорити участь</a>
+          <a href="#contact" class="cert-cta en-only">Discuss participation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ACTIVITIES ══ -->
+<section class="section audience-bg" id="activities">
+  <div class="container">
+    <div class="reveal visible">
+      <div class="section-eyebrow uk-only">Основні напрями</div>
+      <div class="section-eyebrow en-only">Key Activities</div>
+      <h2 class="section-title uk-only">Що ми робимо</h2>
+      <h2 class="section-title en-only">What We Do</h2>
+      <p class="section-sub uk-only">Ключові напрями роботи на етапі запуску — від формування стандарту до партнерств, пілотування та policy advisory</p>
+      <p class="section-sub en-only">Core workstreams at the launch stage — from standard development to partnerships, pilot implementation and policy advisory</p>
+    </div>
+    <div class="activities-grid">
+      <div class="activity-card reveal visible">
+        <div class="activity-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg></div>
+        <div class="activity-title uk-only">Розробка стандарту</div>
+        <div class="activity-title en-only">Standard Development</div>
+        <div class="activity-body uk-only">Розробка базової структури стандарту Human Rights Standard на основі Керівних принципів ООН, стандартів Ради Європи, ISO 26000 та інших міжнародних підходів.</div>
+        <div class="activity-body en-only">Developing the initial structure of the Human Rights Standard on the basis of the UN Guiding Principles, Council of Europe standards, ISO 26000 and other international approaches.</div>
+      </div>
+      <div class="activity-card reveal visible">
+        <div class="activity-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+        <div class="activity-title uk-only">Адвокація та навчання</div>
+        <div class="activity-title en-only">Advocacy &amp; Training</div>
+        <div class="activity-body uk-only">Презентація ініціативи, комунікація з бізнесом, міжнародними організаціями, торгово-промисловими палатами та державними органами, а також просування підходу «бізнес і права людини».</div>
+        <div class="activity-body en-only">Presenting the initiative, engaging with business, international organizations, chambers of commerce and public authorities, and promoting the business and human rights agenda.</div>
+      </div>
+      <div class="activity-card reveal visible">
+        <div class="activity-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"></path></svg></div>
+        <div class="activity-title uk-only">Незалежна оцінка</div>
+        <div class="activity-title en-only">Independent Assessment</div>
+        <div class="activity-body uk-only">Підготовка та тестування моделі оцінювання у межах пілотного етапу з обмеженим колом компаній.</div>
+        <div class="activity-body en-only">Preparing and testing an assessment model within a pilot phase involving a limited number of companies .</div>
+      </div>
+      <div class="activity-card reveal visible">
+        <div class="activity-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path><rect x="9" y="3" width="6" height="4" rx="1"></rect><path d="m9 12 2 2 4-4"></path></svg></div>
+        <div class="activity-title uk-only">Рекомендації для держави</div>
+        <div class="activity-title en-only">Policy Recommendations</div>
+        <div class="activity-body uk-only">Підготовка рекомендацій для державної політики щодо інтеграції підходу «бізнес і права людини» у регулювання, відновлення та взаємодію держави з бізнесом.</div>
+        <div class="activity-body en-only">Preparing recommendations for public policy aimed at integrating business and human rights approaches into regulation, recovery and state-business interaction.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ AUDIENCE ══ -->
+<section class="section" id="audience">
+  <div class="container">
+    <div style="text-align:center" class="reveal visible">
+      <div class="section-eyebrow uk-only" style="justify-content:center;display:inline-flex">Цільова аудиторія</div>
+      <div class="section-eyebrow en-only" style="justify-content:center;display:inline-flex">Target Audience</div>
+      <h2 class="section-title uk-only" style="text-align:center">Для кого це</h2>
+      <h2 class="section-title en-only" style="text-align:center">Who Is This For</h2>
+      <p class="section-sub uk-only" style="text-align:center;margin-inline:auto">Ініціатива орієнтована на кілька взаємопов'язаних груп, від залучення яких залежить її ефективність</p>
+      <p class="section-sub en-only" style="text-align:center;margin-inline:auto">The initiative targets several interconnected groups whose engagement determines its effectiveness</p>
+    </div>
+    <div class="audience-grid">
+      <div class="audience-card reveal visible">
+        <div class="audience-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></div>
+        <div class="audience-title uk-only">Бізнес</div>
+        <div class="audience-title en-only">Business</div>
+        <div class="audience-body uk-only">Компанії, що інтегруються у ринки ЄС та працюють з міжнародними партнерами</div>
+        <div class="audience-body en-only">Companies integrating into EU markets and working with international partners</div>
+      </div>
+      <div class="audience-card reveal visible">
+        <div class="audience-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+        <div class="audience-title uk-only">Бізнес-об'єднання</div>
+        <div class="audience-title en-only">Business Associations</div>
+        <div class="audience-body uk-only">Галузеві асоціації та торгово-промислові палати як провідники підходу серед своїх членів</div>
+        <div class="audience-body en-only">Industry associations and chambers of commerce as channels for outreach and future implementation</div>
+      </div>
+      <div class="audience-card reveal visible">
+        <div class="audience-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg></div>
+        <div class="audience-title uk-only">Органи влади</div>
+        <div class="audience-title en-only">Government Bodies</div>
+        <div class="audience-body uk-only">Центральний та місцевий рівні, зокрема прифронтові регіони у процесі відбудови</div>
+        <div class="audience-body en-only">Central and local levels, including frontline regions in the process of reconstruction</div>
+      </div>
+      <div class="audience-card reveal visible">
+        <div class="audience-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
+        <div class="audience-title uk-only">Наукове середовище</div>
+        <div class="audience-title en-only">Academic Community</div>
+        <div class="audience-body uk-only">Правозахисники, аналітичні центри, академічні інституції та незалежні експерти</div>
+        <div class="audience-body en-only">Human rights defenders, think tanks, academic institutions, and independent experts</div>
+      </div>
+      <div class="audience-card reveal visible">
+        <div class="audience-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+        <div class="audience-title uk-only">Міжнародні партнери</div>
+        <div class="audience-title en-only">International Partners</div>
+        <div class="audience-body uk-only">Інвестори та споживачі, для яких наявність сертифікату є маркером надійності</div>
+        <div class="audience-body en-only">Investors and consumers for whom the certificate is a reliability marker</div>
+      </div>
+      <div class="audience-card reveal visible" style="border-color:rgba(200,168,75,.35);background:var(--gold-pale)">
+        <div class="audience-icon" style="background:rgba(200,168,75,.15);color:var(--navy)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+        <div class="audience-title uk-only" style="color:var(--navy)">Наймані працівники</div>
+        <div class="audience-title en-only" style="color:var(--navy)">Employees</div>
+        <div class="audience-body uk-only" style="color:var(--navy-light)">Люди, для яких гідність є абсолютною та невід'ємною цінністю</div>
+        <div class="audience-body en-only" style="color:var(--navy-light)">People for whom dignity is an absolute and inalienable value</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INTERNATIONAL ══ -->
+<section class="section audience-bg" id="international">
+  <div class="container">
+    <div class="intl-grid">
+      <div class="reveal visible">
+        <div class="section-eyebrow uk-only">Міжнародний вимір</div>
+        <div class="section-eyebrow en-only">Global Dimension</div>
+        <h2 class="section-title uk-only">Відповідність глобальним стандартам</h2>
+        <h2 class="section-title en-only">Alignment with Global Standards</h2>
+        <div class="uk-only">
+          <p style="font-size:var(--t-base);color:var(--text-muted);line-height:1.75;margin-bottom:var(--s6)">Ініціатива розвивається з метою налагодження дієвої взаємодії з міжнародними партнерами, насамперед ООН та Радою Європи, з метою забезпечення відповідності міжнародним стандартам та довіри до підходу.</p>
+          <p style="font-size:var(--t-base);color:var(--text-muted);line-height:1.75;margin-bottom:var(--s8)">У перспективі це має створити передумови для визнання напрацьованого підходу як сумісного з міжнародними практиками та придатного до масштабування.</p>
+        </div>
+        <div class="en-only">
+          <p style="font-size:var(--t-base);color:var(--text-muted);line-height:1.75;margin-bottom:var(--s6)">The initiative is developing to reach cooperation with international partners, in particular the United Nations and the Council of Europe, in order to ensure alignment with international standards and credibility of the approach.</p>
+          <p style="font-size:var(--t-base);color:var(--text-muted);line-height:1.75;margin-bottom:var(--s8)">In the longer term, this is expected to create the conditions for the approach to be recognized as compatible with international practices and suitable for scaling.</p>
+        </div>
+        <div class="quote-block">
+          <div class="quote-text uk-only">"Мета ініціативи — поєднати міжнародні стандарти, практичні потреби бізнесу та інституційну співпрацю."</div>
+          <div class="quote-text en-only">"The initiative aims to connect international standards, practical business needs and institutional cooperation."</div>
+          <div class="quote-source">HRS Foundation</div>
+        </div>
+      </div>
+      <div class="reveal visible">
+        <div class="aside-title uk-only">Партнери та орієнтири</div>
+        <div class="aside-title en-only">Partners &amp; References</div>
+        <div class="partner-row">
+          <div class="partner-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span class="uk-only">Керівні принципи ООН</span><span class="en-only">UN Guiding Principles</span></div>
+          <div class="partner-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg><span class="uk-only">Рада Європи</span><span class="en-only">Council of Europe</span></div>
+          <div class="partner-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>ISO 26000</div>
+          <div class="partner-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg>EU CSDDD</div>
+          <div class="partner-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg><span class="uk-only">Торгово-промислові палати</span><span class="en-only">Chambers of Commerce</span></div>
+          <div class="partner-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>Recognition models</div>
+          <div class="partner-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>Public trust</div>
+        </div>
+        <div style="margin-top:var(--s8);padding:var(--s6);background:var(--navy);border-radius:var(--r-xl);color:#fff">
+          <div style="font-family:var(--font-d);font-size:var(--t-lg);margin-bottom:var(--s4)" class="uk-only">Додана цінність</div>
+          <div style="font-family:var(--font-d);font-size:var(--t-lg);margin-bottom:var(--s4)" class="en-only">Added Value</div>
+          <div style="display:flex;flex-direction:column;gap:var(--s3)">
+            <div style="display:flex;align-items:flex-start;gap:var(--s3);font-size:var(--t-sm);color:rgba(255,255,255,.65)"><span style="color:var(--gold);flex-shrink:0;margin-top:2px">→</span><span class="uk-only">Підвищує конкурентоспроможність на ринках ЄС</span><span class="en-only">Increases competitiveness in EU markets</span></div>
+            <div style="display:flex;align-items:flex-start;gap:var(--s3);font-size:var(--t-sm);color:rgba(255,255,255,.65)"><span style="color:var(--gold);flex-shrink:0;margin-top:2px">→</span><span class="uk-only">Інструмент держполітики без адмін-навантаження</span><span class="en-only">Policy tool without administrative burden</span></div>
+            <div style="display:flex;align-items:flex-start;gap:var(--s3);font-size:var(--t-sm);color:rgba(255,255,255,.65)"><span style="color:var(--gold);flex-shrink:0;margin-top:2px">→</span><span class="uk-only">Посилення захисту прав через бізнес-канали</span><span class="en-only">Strengthened rights protection through business channels</span></div>
+            <div style="display:flex;align-items:flex-start;gap:var(--s3);font-size:var(--t-sm);color:rgba(255,255,255,.65)"><span style="color:var(--gold);flex-shrink:0;margin-top:2px">→</span><span class="uk-only">Маркер довіри для інвесторів і споживачів</span><span class="en-only">Trust marker for investors and consumers</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ REGIONS ══ -->
+<section class="section regions-bg" id="regions">
+  <div class="container">
+    <div style="text-align:center" class="reveal visible">
+      <div class="section-eyebrow uk-only" style="justify-content:center;display:inline-flex">Географія</div>
+      <div class="section-eyebrow en-only" style="justify-content:center;display:inline-flex">Geography</div>
+      <h2 class="section-title uk-only" style="color:#fff">Пілотне впровадження</h2>
+      <h2 class="section-title en-only" style="color:#fff">Pilot Implementation</h2>
+      <p class="section-sub uk-only" style="color:rgba(255,255,255,.5);text-align:center;margin-inline:auto">Пілотний етап передбачає обмежене коло компаній та партнерів для тестування підходу, доопрацювання методології та формування перших кейсів</p>
+      <p class="section-sub en-only" style="color:rgba(255,255,255,.5);text-align:center;margin-inline:auto">The pilot phase envisages a limited group of companies and partners in order to test the approach, refine the methodology and develop the first case studies</p>
+    </div>
+    <div class="regions-grid">
+      <div class="region-card region-card--pilot reveal visible">
+        <div class="region-tag uk-only">Пілотний трек</div>
+        <div class="region-tag en-only">Pilot Track</div>
+        <div class="region-name uk-only">Компанії</div>
+        <div class="region-name en-only">Companies</div>
+        <div class="region-body uk-only">Добровільне залучення обмеженого кола компаній для перевірки логіки критеріїв, практичності моделі та формування першого досвіду застосування стандарту.</div>
+        <div class="region-body en-only">Voluntary engagement of a limited number of companies in order to test the criteria, the practicality of the model and generate the first implementation experience.</div>
+      </div>
+      <div class="region-card region-card--pilot reveal visible">
+        <div class="region-tag uk-only">Пілотний трек</div>
+        <div class="region-tag en-only">Pilot Track</div>
+        <div class="region-name uk-only">Партнери</div>
+        <div class="region-name en-only">Partners</div>
+        <div class="region-body uk-only">Залучення міжнародних організацій, торгово-промислових палат, бізнес-об’єднань та експертного середовища до обговорення і доопрацювання підходу.</div>
+        <div class="region-body en-only">Engagement of international organizations, chambers of commerce, business associations and expert community in discussing and refining the approach.</div>
+      </div>
+      <div class="region-card reveal visible">
+        <div class="region-tag uk-only">Наступний етап</div>
+        <div class="region-tag en-only">Next Phase</div>
+        <div class="region-name uk-only">Визнання</div>
+        <div class="region-name en-only">Recognition</div>
+        <div class="region-body uk-only">Після пілотування та інституційного посилення може бути запроваджений механізм публічного підтвердження відповідності через знак Human Rights Standard.</div>
+        <div class="region-body en-only">Following the pilot phase and stronger institutional support, a public recognition mechanism through the Human Rights Standard mark may be introduced.</div>
+      </div>
+    </div>
+    <div style="margin-top:var(--s10);padding:var(--s8);border:1px solid rgba(200,168,75,.15);border-radius:var(--r-xl);background:rgba(255,255,255,.03)" class="reveal visible">
+      <div style="font-family:var(--font-d);font-size:var(--t-xl);color:#fff;margin-bottom:var(--s4)" class="uk-only">Перспектива розвитку</div>
+      <div style="font-family:var(--font-d);font-size:var(--t-xl);color:#fff;margin-bottom:var(--s4)" class="en-only">Development Perspective</div>
+      <div style="font-size:var(--t-base);color:rgba(255,255,255,.5);line-height:1.75" class="uk-only">Після формування партнерської підтримки, відпрацювання пілоту та залучення зовнішньої експертизи ініціатива перейде до повноцінного функціонування, надання знака та ширшої консультативної і просвітницької діяльності.</div>
+      <div style="font-size:var(--t-base);color:rgba(255,255,255,.5);line-height:1.75" class="en-only">After building partnerships, validating the pilot and attracting external expertise, the initiative may move towards full operation, granting the mark and expanding its advisory and outreach activities.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA STRIP ══ -->
+<section class="cta-strip">
+  <div class="container">
+    <div class="cta-strip-inner reveal visible">
+      <h2 class="uk-only">Готові <strong>розпочати?</strong></h2>
+      <h2 class="en-only">Ready to <strong>Begin?</strong></h2>
+      <p class="uk-only">Запрошуємо бізнес, міжнародних партнерів, торгово-промислові палати та органи влади долучатися до ініціативи на етапі її формування.</p>
+      <p class="en-only">We invite business, international partners, chambers of commerce and public authorities to engage with the initiative at this formative stage.</p>
+      <div class="hero-actions">
+        <a class="btn-primary uk-only" href="#contact">Зв’язатися з нами</a>
+        <a class="btn-primary en-only" href="#contact">Contact Us</a>
+        <a class="btn-secondary uk-only" href="#international">Дізнатися більше</a>
+        <a class="btn-secondary en-only" href="#international">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="section" id="faq">
+  <div class="container--narrow">
+    <div class="reveal visible">
+      <div class="section-eyebrow uk-only">Часті запитання</div>
+      <div class="section-eyebrow en-only">Frequently Asked Questions</div>
+      <h2 class="section-title">FAQ</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="uk-only">Що таке знак «Human Rights Standard» і чим він відрізняється від ISO?</span>
+          <span class="en-only">What is the "Human Rights Standard" mark and how does it differ from ISO?</span>
+          <div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+        </div>
+        <div class="faq-a">
+          <span class="uk-only">ISO 26000 — рекомендаційний стандарт без незалежного підтвердження відповідності. Знак HRS — це результат реальної незалежної оцінки компанії за чіткими, вимірюваними критеріями. За аналогією з Fairtrade або Public trust — знак, якому споживач і партнер можуть довіряти.</span>
+          <span class="en-only">ISO 26000 is a guidance standard without independent compliance verification. The HRS mark is the result of a real independent assessment against clear, measurable criteria. Like Fairtrade or Public trust — a mark that consumers and partners can trust.</span>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="uk-only">Скільки коштує сертифікація?</span>
+          <span class="en-only">How much does certification cost?</span>
+          <div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+        </div>
+        <div class="faq-a">
+          <span class="uk-only">Ініціатива не зосереджена на отриманні прибутку від діяльності, включаючи сертифікацію.   </span>
+          <span class="en-only">The initiative is not focused on gaining profits, also resulting from certification.</span>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="uk-only">Чи підходить сертифікація для малого та середнього бізнесу?</span>
+          <span class="en-only">Is certification suitable for small and medium-sized businesses?</span>
+          <div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+        </div>
+        <div class="faq-a">
+          <span class="uk-only">Так. Пілотна та подальша модель передбачають можливість участі компаній різного розміру. Одним із завдань ініціативи є саме вироблення практичного і пропорційного підходу для різних типів бізнесу.</span>
+          <span class="en-only">Yes. Both the pilot and the future model are intended to allow participation by companies of different sizes. One of the initiative’s goals is to develop a practical and proportionate approach for different types of business.</span>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="uk-only">Як сертифікат впливає на вихід на ринок ЄС?</span>
+          <span class="en-only">How does the certificate affect access to the EU market?</span>
+          <div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+        </div>
+        <div class="faq-a">
+          <span class="uk-only">Ініціатива виходить із того, що міжнародні та європейські стандарти дедалі більше впливають на вимоги до бізнесу та ланцюгів постачання. У перспективі напрацьований підхід може стати корисним інструментом для компаній, що працюють із міжнародними партнерами.</span>
+          <span class="en-only">The initiative proceeds from the understanding that international and European standards increasingly shape expectations for business conduct and supply chains. In the longer term, the developed approach may become a useful tool for companies working with international partners.</span>
+        </div>
+      </div>
+      <div class="faq-item open">
+        <div class="faq-q">
+          <span class="uk-only">Як довго діє сертифікат?</span>
+          <span class="en-only">How long is the certificate valid?</span>
+          <div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+        </div>
+        <div class="faq-a">
+          <span class="uk-only">Механізм надання знака та строки його дії будуть визначатися після завершення пілотування, доопрацювання методології та формування належної інституційної підтримки.</span>
+          <span class="en-only">The rules for granting the mark and the duration of its validity will be defined after the completion of the pilot phase, further refinement of the methodology and the establishment of adequate institutional support.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section class="section audience-bg" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal visible">
+        <div class="section-eyebrow uk-only">Зв'язок</div>
+        <div class="section-eyebrow en-only">Contact</div>
+        <h2 class="section-title uk-only">Давайте розпочнемо</h2>
+        <h2 class="section-title en-only">Let's Get Started</h2>
+        <p style="font-size:var(--t-base);color:var(--text-muted);line-height:1.75;margin-bottom:var(--s8)" class="uk-only">Зв’яжіться з нами для обговорення партнерства, участі у пілотуванні, експертної взаємодії або співпраці у сфері державної політики.</p>
+        <p style="font-size:var(--t-base);color:var(--text-muted);line-height:1.75;margin-bottom:var(--s8)" class="en-only">Contact us to discuss partnership, pilot participation, expert engagement or cooperation in the public policy dimension.</p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-val">info@hrs-foundation.org</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+            <div>
+              <div class="contact-label uk-only">Вебсайт</div>
+              <div class="contact-label en-only">Website</div>
+              <div class="contact-val">hrs-foundation.org</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+            <div>
+              <div class="contact-label uk-only">Місцезнаходження</div>
+              <div class="contact-label en-only">Location</div>
+              <div class="contact-val uk-only">Київ, Україна</div>
+              <div class="contact-val en-only">Kyiv, Ukraine</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal visible">
+        <h3 style="font-family:var(--font-d);font-size:var(--t-lg);color:var(--navy);margin-bottom:var(--s6)" class="uk-only">Надіслати запит</h3>
+        <h3 style="font-family:var(--font-d);font-size:var(--t-lg);color:var(--navy);margin-bottom:var(--s6)" class="en-only">Send a Request</h3>
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name" class="uk-only">Ваше ім'я</label>
+            <label for="name" class="en-only">Your Name</label>
+            <input type="text" id="name" placeholder="Ім&#39;я та прізвище / Full name" required="">
+          </div>
+          <div class="form-group">
+            <label for="org" class="uk-only">Організація</label>
+            <label for="org" class="en-only">Organisation</label>
+            <input type="text" id="org" placeholder="Назва компанії / Company name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="your@email.com" required="">
+          </div>
+          <div class="form-group">
+            <label for="interest" class="uk-only">Що вас цікавить?</label>
+            <label for="interest" class="en-only">What are you interested in?</label>
+            <select id="interest">
+              <option value="" class="uk-only">Оберіть опцію...</option>
+              <option value="" class="en-only">Select option...</option>
+              <option value="training" class="uk-only">Експертна взаємодія</option>
+              <option value="training" class="en-only">Expert engagement</option>
+              <option value="cert" class="uk-only">Пілотування</option>
+              <option value="cert" class="en-only">Pilot phase</option>
+              <option value="partner" class="uk-only">Партнерство</option>
+              <option value="partner" class="en-only">Partnership</option>
+              <option value="other" class="uk-only">Інше</option>
+              <option value="other" class="en-only">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message" class="uk-only">Повідомлення</label>
+            <label for="message" class="en-only">Message</label>
+            <textarea id="message" placeholder="Ваше повідомлення / Your message..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit uk-only">Надіслати заявку →</button>
+          <button type="submit" class="btn-primary form-submit en-only">Send Request →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">HRS <span>Foundation</span></div>
+        <div class="footer-desc uk-only">Незалежна ініціатива, спрямована на розробку стандарту, моделі оцінювання та механізму визнання відповідального бізнесу у сфері прав людини.</div>
+        <div class="footer-desc en-only">An independent initiative focused on developing a standard, an assessment model and a recognition mechanism for responsible business conduct in the field of human rights.</div>
+        <div class="social-links" style="margin-top:var(--s6)">
+          <a href="#" class="social-link" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          <a href="#" class="social-link" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="uk-only">Ініціатива</h4>
+        <h4 class="en-only">Initiative</h4>
+        <div class="footer-links">
+          <a href="#about" class="footer-link uk-only">Про нас</a>
+          <a href="#about" class="footer-link en-only">About</a>
+          <a href="#how" class="footer-link uk-only">Як це працює</a>
+          <a href="#how" class="footer-link en-only">How It Works</a>
+          <a href="#activities" class="footer-link uk-only">Напрями</a>
+          <a href="#activities" class="footer-link en-only">Activities</a>
+          <a href="#regions" class="footer-link uk-only">Регіони</a>
+          <a href="#regions" class="footer-link en-only">Regions</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="uk-only">Залучення</h4>
+        <h4 class="en-only">Engagement</h4>
+        <div class="footer-links">
+          <a href="#certification" class="footer-link">HRS Aware</a>
+          <a href="#certification" class="footer-link">HRS Committed</a>
+          <a href="#certification" class="footer-link">HRS Certified</a>
+          <a href="#faq" class="footer-link">FAQ</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="uk-only">Контакти</h4>
+        <h4 class="en-only">Contacts</h4>
+        <div class="footer-links">
+          <a href="mailto:info@hrs-foundation.org" class="footer-link">info@hrs-foundation.org</a>
+          <a href="#contact" class="footer-link uk-only">Форма зв'язку</a>
+          <a href="#contact" class="footer-link en-only">Contact Form</a>
+          <a href="#contact" class="footer-link uk-only">Партнерство</a>
+          <a href="#contact" class="footer-link en-only">Partnership</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy uk-only">© 2026 HRS Foundation. Усі права захищено.</div>
+      <div class="footer-copy en-only">© 2026 HRS Foundation. All rights reserved.</div>
+      <div class="footer-legal">
+        <a href="#" class="uk-only">Умови використання</a>
+        <a href="#" class="en-only">Terms of Use</a>
+        <a href="#" class="uk-only">Конфіденційність</a>
+        <a href="#" class="en-only">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── DARK MODE ──
+(function(){
+  const t=document.querySelector('[data-theme-toggle]');
+  const r=document.documentElement;
+  let d=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+  r.setAttribute('data-theme',d);
+  const sun='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+  const moon='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  if(t){
+    t.innerHTML = d==='dark' ? sun : moon;
+    t.addEventListener('click',()=>{
+      d=d==='dark'?'light':'dark';
+      r.setAttribute('data-theme',d);
+      t.innerHTML=d==='dark'?sun:moon;
+    });
+  }
+})();
+
+// ── LANGUAGE TOGGLE ──
+(function(){
+  const html = document.documentElement;
+  const btnUK = document.getElementById('btnUK');
+  const btnEN = document.getElementById('btnEN');
+  const mobileBtnUK = document.getElementById('mobileBtnUK');
+  const mobileBtnEN = document.getElementById('mobileBtnEN');
+  let currentLang = 'uk';
+
+  function setLang(lang) {
+    currentLang = lang;
+    html.setAttribute('data-lang', lang);
+    html.setAttribute('lang', lang === 'uk' ? 'uk' : 'en');
+    [btnUK, mobileBtnUK].forEach(btn => { if(btn) { btn.classList.toggle('active', lang === 'uk'); }});
+    [btnEN, mobileBtnEN].forEach(btn => { if(btn) { btn.classList.toggle('active', lang === 'en'); }});
+  }
+
+  if(btnUK) btnUK.addEventListener('click', () => setLang('uk'));
+  if(btnEN) btnEN.addEventListener('click', () => setLang('en'));
+  if(mobileBtnUK) mobileBtnUK.addEventListener('click', () => setLang('uk'));
+  if(mobileBtnEN) mobileBtnEN.addEventListener('click', () => setLang('en'));
+})();
+
+// ── MOBILE MENU ──
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+function closeMobileMenu() { mobileMenu.classList.remove('open'); }
+
+// ── SCROLL: NAV ──
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('nav--scrolled', window.scrollY > 60);
+});
+
+// ── REVEAL ──
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }});
+}, {threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// ── FAQ ──
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if(!isOpen) item.classList.add('open');
+  });
+});
+
+// ── CONTACT FORM ──
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type="submit"]');
+  const lang = document.documentElement.getAttribute('data-lang');
+  btn.textContent = lang === 'uk' ? 'Надсилаємо...' : 'Sending...';
+  setTimeout(() => {
+    btn.textContent = lang === 'uk' ? '✓ Надіслано! Ми відповімо найближчим часом.' : '✓ Sent! We will respond shortly.';
+    btn.style.background = '#437a22';
+    e.target.reset();
+  }, 1200);
+}
+</script>
+
+</body></html>
